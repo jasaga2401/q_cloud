@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="q_cloud.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:q_cloud"
+    Shell.FlyoutBehavior="Disabled"
+    Title="q_cloud">
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+
+    <ShellContent 
+        Route="HomePage" 
+        ContentTemplate="{DataTemplate local:HomePage}" />
+
+    <ShellContent 
+        Route="EnterUserPage" 
+        ContentTemplate="{DataTemplate local:EnterUserPage}" />
+
+</Shell>

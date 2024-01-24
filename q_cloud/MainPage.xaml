@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="q_cloud.MainPage"
+             BackgroundColor="#000000">
+
+    <Grid VerticalOptions="CenterAndExpand" 
+          HorizontalOptions="CenterAndExpand">
+
+        <Label Text="Quit Cloud"                      
+             TextColor="white"
+                       FontSize="40"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalOptions="CenterAndExpand"                       
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center" />
+    </Grid>
+
+</ContentPage>

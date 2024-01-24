@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"             
+             x:Class="q_cloud.HomePage"
+             xmlns:local="clr-namespace:q_cloud">
+
+    <ContentPage.BindingContext>
+        <local:MainViewModel />
+    </ContentPage.BindingContext>
+    
+    <ScrollView>
+        <StackLayout>
+
+            <Image Source="Resources/Images/mountain.jpg" 
+                   Aspect="AspectFill" 
+                   HorizontalOptions="FillAndExpand"
+                   HeightRequest="200" />
+
+            <Label 
+                   Text="Overview"            
+                   VerticalOptions="Center" 
+                   HorizontalOptions="Center"
+                   Margin="0, 40, 0, 0"
+                   FontSize="20" />
+
+            <Grid HorizontalOptions="Center" VerticalOptions="Center">
+                <!-- column definitions -->
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="180" />
+                    <ColumnDefinition Width="180" />
+                </Grid.ColumnDefinitions>
+
+                <!-- column definitions -->
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <!-- Add more rows as needed -->
+                </Grid.RowDefinitions>
+
+                <!-- first column -->
+                <Label Grid.Row="0" Grid.Column="0" Padding="0, 40, 0, 0" HorizontalOptions="Center" FontSize="15" Text="Name:" />
+                <Label Grid.Row="1" Grid.Column="0" Padding="0, 40, 0, 0" HorizontalOptions="Center" FontSize="15" Text="Date of Birth:" />
+                <Label Grid.Row="2" Grid.Column="0" Padding="0, 40, 0, 0" HorizontalOptions="Center" FontSize="15" Text="Start Date:" />
+                <Label Grid.Row="3" Grid.Column="0" Padding="0, 40, 0, 0" HorizontalOptions="Center" FontSize="15" Text="Quit Date:" />
+                <Label Grid.Row="4" Grid.Column="0" Padding="0, 40, 0, 0" HorizontalOptions="Center" FontSize="15" Text="Smoking Days:" />
+                <Label Grid.Row="5" Grid.Column="0" Padding="0, 40, 0, 0" HorizontalOptions="Center" FontSize="15" Text="Smoke Free Days:" />
+                <Label Grid.Row="6" Grid.Column="0" Padding="0, 40, 0, 0" HorizontalOptions="Center" FontSize="15" Text="Not smoked:" />
+                <Label Grid.Row="7" Grid.Column="0" Padding="0, 40, 0, 0" HorizontalOptions="Center" FontSize="15" Text="Money saved:" />
+
+
+                <!-- second column -->
+                <Label Grid.Row="0" Grid.Column="1" Padding="0, 40, 0, 0" HorizontalOptions="Center"  FontSize="15" Text="{Binding LabelName}" />
+                <Label Grid.Row="1" Grid.Column="1" Padding="0, 40, 0, 0" HorizontalOptions="Center"  FontSize="15" Text="{Binding LabelDob}" />
+                <Label Grid.Row="2" Grid.Column="1" Padding="0, 40, 0, 0" HorizontalOptions="Center"  FontSize="15" Text="{Binding LabelStart}" />
+                <Label Grid.Row="3" Grid.Column="1" Padding="0, 40, 0, 0" HorizontalOptions="Center"  FontSize="15" Text="{Binding LabelQuit}" />
+                <Label Grid.Row="4" Grid.Column="1" Padding="0, 40, 0, 0" HorizontalOptions="Center"  FontSize="15" Text="{Binding LabelSmokingDays}" />
+                <Label Grid.Row="5" Grid.Column="1" Padding="0, 40, 0, 0" HorizontalOptions="Center"  FontSize="15" Text="{Binding LabelSmokeFree}" />
+                <Label Grid.Row="6" Grid.Column="1" Padding="0, 40, 0, 0" HorizontalOptions="Center"  FontSize="15" Text="{Binding LabelNoSmokes}" />
+                <Label Grid.Row="7" Grid.Column="1" Padding="0, 40, 0, 0" HorizontalOptions="Center"  FontSize="15" Text="{Binding LabelCostSaving}" />
+
+            </Grid>
+
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

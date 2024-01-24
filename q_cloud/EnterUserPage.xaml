@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="q_cloud.EnterUserPage"             
+             Title="EnterUserPage"
+             BackgroundColor="#000000">
+    <ScrollView>
+        <VerticalStackLayout>
+            <Image Source="Resources/Images/lake.jpg" 
+                Aspect="AspectFill" 
+                HorizontalOptions="FillAndExpand"
+                HeightRequest="200" />
+
+            <Label
+                Text="User Information" 
+                FontSize="30"
+                Padding="0, 40, 0, 0"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />
+            <Label 
+                Text="Enter the following details: "
+                FontSize="20"
+                Padding="0, 30, 0, 0"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />
+
+
+            <Grid Padding="30,30,0,0">
+                <!-- Define Columns -->
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="160" />
+                    <ColumnDefinition Width="180" />
+                </Grid.ColumnDefinitions>
+
+                <!-- Define Rows if necessary -->
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <!-- Add more rows as needed -->
+                </Grid.RowDefinitions>
+
+                <!-- Place elements in the grid -->
+                <!-- First Column -->
+                <Label Grid.Row="0" Grid.Column="0" Text="Forename: " FontSize="15" Padding="0,20,0,0"/>
+                <Label Grid.Row="1" Grid.Column="0" Text="Surname: " FontSize="15" Padding="0,20,0,0" />
+                <Label Grid.Row="2" Grid.Column="0" Text="Date of Birth: " FontSize="15" Padding="0,20,0,0" />
+                <Label Grid.Row="3" Grid.Column="0" Text="Start date: " FontSize="15" Padding="0,20,0,0" />
+                <Label Grid.Row="4" Grid.Column="0" Text="Quit date: " FontSize="15" Padding="0,20,0,0" />
+                <Label Grid.Row="5" Grid.Column="0" Text="Average Smokes per Day: " FontSize="15" Padding="0,20,0,0" />
+                <Label Grid.Row="7" Grid.Column="0" Text="Cost Packet Cigarettes: " FontSize="15" Padding="0,20,0,0" />
+
+                <!-- Second Column -->
+                <Entry x:Name="ForenameEntry" Grid.Row="0" Grid.Column="1" FontSize="15" Text="{Binding Age}"/>
+                <Entry x:Name="SurnameEntry" Grid.Row="1" Grid.Column="1" Text="{Binding Appearances}" FontSize="15"/>
+                <DatePicker x:Name="myDateOfBirth" Grid.Row="2" Grid.Column="1" FontSize="15" WidthRequest="180" HorizontalOptions="Center"/>
+                <DatePicker x:Name="myStartDate" Grid.Row="3" Grid.Column="1" FontSize="15" WidthRequest="180" HorizontalOptions="Center"/>
+                <DatePicker x:Name="myQuitDate" Grid.Row="4" Grid.Column="1" FontSize="15" WidthRequest="180" HorizontalOptions="Center"/>
+
+                <Slider Grid.Row="6" Grid.Column="1" Minimum="0" Maximum="50" Value="50" ValueChanged="OnSliderValueAvgNumSmokedVal" />
+                <Label x:Name="avgNumSmokedVal" Grid.Row="5" Grid.Column="1" FontSize="15" Padding="0,30,0,0" Text="{Binding Source={x:Reference avgNumSmokedVal}, Path=Value, StringFormat='{0:F0}'}" HorizontalOptions="Center" />
+
+                <Slider Grid.Row="8" Grid.Column="1" Minimum="0" Maximum="50" Value="50" ValueChanged="OnSliderValueCstPacketCigarettes" />
+                <Label x:Name="cstPacketCigarettes" Grid.Row="7" Grid.Column="1" FontSize="15" Padding="0,30,0,0" Text="{Binding Source={x:Reference cstPacketCigarettes}, Path=Value, StringFormat='{0:F0}'}" HorizontalOptions="Center" />
+
+            </Grid>
+
+            <Button
+                x:Name="RegisterBtn"
+                Text="Enter"
+                FontSize="20"
+                BackgroundColor="White"
+                Margin="0, 40, 0, 0"
+                Padding="80, 10, 80, 10"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" 
+                Clicked="OnRegisterButtonClicked" />        
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
